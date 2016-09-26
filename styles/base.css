@@ -1,4 +1,17 @@
 body {
+  background-color: #49392C;
   width: 100%
-  background-color: blue;
+}
+
+#navbar {
+  background-color: #83858C;
+}
+
+#projects {
+  background-color: #685762;
+}
+
+.bodytext {
+  font-family:'Pavanam', sans-serif;
+  font-size: 1em;
 }
