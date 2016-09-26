@@ -1,4 +1,33 @@
 body {
   display: block;
-  align-text: center;
+  width: 100%;
+}
+
+#introduction: {
+  display: block;
+  width: 100%;
+}
+
+#navbar {
+  display:block;
+  width: 100%;
+}
+
+#nameintro {
+  float: left;
+  width: 30%;
+  height: 15em;
+  text-align: left;
+}
+
+#about {
+  float:right;
+  width: 70%;
+  height: 15em;
+}
+
+.socialmedia {
+  display: inline-block;
+  width: 10%;
+  text-align: center;
 }
