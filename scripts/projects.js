@@ -8,5 +8,6 @@ function ProjectOb (input) {
 
 ProjectOb.prototype.toHtml = function(){
   var $newProject = $('section.template').clone();
-
 };
+
+//add delgation
