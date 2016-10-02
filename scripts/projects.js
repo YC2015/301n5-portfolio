@@ -1,4 +1,4 @@
-var projects = [];
+var projectsarray = [];
 
 function ProjectOb (input) {
   this.name = input.name;
@@ -7,12 +7,18 @@ function ProjectOb (input) {
 }
 
 ProjectOb.prototype.toHtml = function(){
-  var source = $('#project-template').html;
-  var template = Handlebars.compile(source);
-  return template(this);
+  var $newProject = $('article.template').clone();
+  $newProject.removeClass('template');
+  $newProject.find('h3').text(this.name);
+  $newProject.find('#tech').text(this.techtype);
+  $newProject.find('#des').text(this.description);
+  return $newProject;
 };
 
-//add delgation
- // create function to loop through the project objects to push into array
+projectData.forEach(function(a){
+  projectsarray.push(new ProjectOb(a));
+});
 
- // create function to loop through and append projects and run the toHtml method
+projectsarray.forEach(function(b) {
+  $('#projects').append(b.toHtml());
+});
