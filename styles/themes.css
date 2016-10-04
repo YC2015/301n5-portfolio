@@ -1,0 +1,33 @@
+li {
+  font-family: 'Nixie One', cursive;
+}
+
+h1 {
+  font-family: 'Nixie One', cursive;
+}
+
+h2 {
+  font-family: 'Nixie One', cursive;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Nixie One', cursive;
+}
+
+p {
+  font-family: 'Poiret One', cursive;
+}
+
+footer {
+  font-family: 'Nixie One', cursive;
+}
+
+.bodytext {
+  font-family: 'Poiret One', cursive;
+}
+
+#titledescription{
+  font-family: 'Cherry Cream Soda', cursive;
+  color: grey;
+}

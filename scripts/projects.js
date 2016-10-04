@@ -1,3 +1,5 @@
+'use strict';
+
 var projectsarray = [];
 
 function ProjectOb (input) {

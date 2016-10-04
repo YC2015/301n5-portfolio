@@ -8,11 +8,6 @@ body {
   width: 100%;
 }
 
-#navbar {
-  display:block;
-  width: 100%;
-}
-
 #nameintro {
   float: left;
   width: 30%;
@@ -24,6 +19,10 @@ body {
   float:right;
   width: 70%;
   height: 15em;
+}
+
+#navbar{
+  justify-content: space-between;
 }
 
 .socialmedia {
