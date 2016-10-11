@@ -1,33 +1,44 @@
 'use strict';
 
-var projectsarray = [];
-
 function ProjectOb (input) {
   this.name = input.name;
   this.techtype = input.techtype;
   this.description = input.description;
 }
 
-ProjectOb.prototype.toHtml = function(){
-  // without Handlebars
-  //var $newProject = $('article.template').clone();
-  //$newProject.removeClass('template');
-  //$newProject.find('h3').text(this.name);
-  //$newProject.find('#tech').text(this.techtype);
-  //$newProject.find('#des').text(this.description);
-  //return $newProject;
+// tracking objects in the constructor
+ProjectOb.all = [];
 
-  // with Handlebars
+
+// creates html template
+ProjectOb.prototype.toHtml = function(){
   var source = $('#template-script').html();
-  //console.log(source);
   var template = Handlebars.compile(source);
   return template(this);
 };
 
-projectData.forEach(function(a){
-  projectsarray.push(new ProjectOb(a));
-});
+// function that takes data and pushes into constructor array and also appends to index page
+ProjectOb.loadAll = function(rawData){
+  rawData.forEach(function(a) {
+    ProjectOb.all.push(new ProjectOb(a));
+    console.log(a);
+  });
 
-projectsarray.forEach(function(b) {
-  $('#projects').append(b.toHtml());
-});
+  ProjectOb.all.forEach(function(b) {
+    $('#projects').append(b.toHtml());
+  });
+
+};
+
+// AJAX and JSON
+ProjectOb.fetchAll = function (){
+  if (localStorage.rawData){
+    ProjectOb.loadAll(JSON.parse(localStorage.rawData));
+  } else {
+    $.getJSON('data/source.json', function (datastuff){
+      ProjectOb.loadAll(datastuff);
+      localStorage.rawData = JSON.stringify(datastuff);
+    }
+  );
+  }
+};
