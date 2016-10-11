@@ -11,8 +11,12 @@
     <link rel="stylesheet" href="styles/state.css">
     <link rel="stylesheet" href="styles/themes.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi|Cherry+Cream+Soda|Nixie+One|Poiret+One" rel="stylesheet">
-    <!-- <script id = "project-template" type = "text/x-handlebars-template">
-    add html with {{}} and {{{}}} for the template  -->
+    <script id = "template-script" type = "text/x-handlebars-template">
+      <article>
+        <h3>{{name}}</h3>
+        <p id = 'tech'>{{techtype}}</p>
+        <p id = 'des'>{{description}}</p>
+      </article>
     </script>
   </head>
   <body>
@@ -35,11 +39,11 @@
     </section>
     <h2>Projects</h2>
     <section id="projects">
-    <article class = "template">
+    <!-- <article class = "template"> without handlebars
       <h3>name</h3>
       <p id = 'tech'>techtype</p>
       <p id = 'des'>description</p>
-    </article>
+    </article> -->
   </section>
   <h2 id = "social">Social Media</h2>
   <footer>
@@ -48,6 +52,7 @@
     <div class = "socialmedia"><a href="http://www.openprocessing.org/user/50890">Openprocessing</a></div>
   </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="scripts/source.js"></script>
     <script type="text/javascript" src="scripts/projects.js"></script>
     <script type="text/javascript" src="scripts/project2.js"></script>

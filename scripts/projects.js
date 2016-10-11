@@ -9,12 +9,19 @@ function ProjectOb (input) {
 }
 
 ProjectOb.prototype.toHtml = function(){
-  var $newProject = $('article.template').clone();
-  $newProject.removeClass('template');
-  $newProject.find('h3').text(this.name);
-  $newProject.find('#tech').text(this.techtype);
-  $newProject.find('#des').text(this.description);
-  return $newProject;
+  // without Handlebars
+  //var $newProject = $('article.template').clone();
+  //$newProject.removeClass('template');
+  //$newProject.find('h3').text(this.name);
+  //$newProject.find('#tech').text(this.techtype);
+  //$newProject.find('#des').text(this.description);
+  //return $newProject;
+
+  // with Handlebars
+  var source = $('#template-script').html();
+  //console.log(source);
+  var template = Handlebars.compile(source);
+  return template(this);
 };
 
 projectData.forEach(function(a){
