@@ -1,7 +1,8 @@
 'use strict';
 
-var pageDynamics = {
-};
+(function(module){
+
+var pageDynamics = {};
 
 pageDynamics.expandHamburger = function(){
   $('#hamburgerpicture').on('click', function(){
@@ -10,3 +11,7 @@ pageDynamics.expandHamburger = function(){
 };
 
 pageDynamics.expandHamburger();
+
+  module.pageDynamics = pageDynamics;
+
+})(window);

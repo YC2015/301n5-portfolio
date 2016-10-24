@@ -1,5 +1,7 @@
 'use strict';
 
+(function(module){
+
 function ProjectOb (input) {
   this.name = input.name;
   this.techtype = input.techtype;
@@ -42,3 +44,5 @@ ProjectOb.fetchAll = function (){
   );
   }
 };
+  module.ProjectOb = ProjectOb;
+})(window);
