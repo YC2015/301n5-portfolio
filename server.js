@@ -39,10 +39,7 @@ app.listen(port, function() {
 });
 
 
-// I still need to create my Heroku instance
-// I will do this by using heroku create naming it YCportfolio
-// Once I add changes to my master (accessing the github api), I will push onto my new Heroku app using git push origin Heroku
-// I will use Heroku open to test my app
 
-//Token Information
-// I have configured an environment variable for my github token on my bash profile using env
+//I will be adding a pages.js file and adding Pages.js to my script file.
+//My pages.js file will have paths that update pages
+//To load these paths, I will create a controller file(s)
