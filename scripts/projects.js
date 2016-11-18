@@ -8,15 +8,16 @@
     this.description = input.description;
   }
 
+  // tracking objects in the constructor
+  ProjectOb.all = [];
+
   // mapping and reducing to get new array
-  ProjectOb.numbers = function(){
+  ProjectOb.prototype.numbers = function(){
     return ProjectOb.all.map(function(e){
       return e.techtype.split(' ').length;
     });
   };
 
-  // tracking objects in the constructor
-  ProjectOb.all = [];
 
   // creates html template
   ProjectOb.prototype.toHtml = function(){
